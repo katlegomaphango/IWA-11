@@ -90,7 +90,9 @@ pancakes3.querySelector('[class="count"]').textContent = root3.dataset.pancakes
 status3.textContent = Boolean(root3.dataset.delivered) ? "Delivered" : "Pending"
 
 // document(biscuits.p-count).pending = 3-status ? 1-biscuits + 2-biscuits + 3-biscuits: 0
+document(biscuits.p-count).pending = 3-status ? biscuits1 + biscuits2 + biscuits3 : 0
 // document(biscuits.p-count).delivered 3-status ? 0 : 1-biscuits + 2-biscuits + 3-biscuits
+document(biscuits.p-count).delivered 3-status ? 0 : biscuits1 + biscuits2 + biscuits3
 
 // document(donuts.p-count).pending = 3-status ? 1-donuts + 2-donuts + 3-donuts: 0
 // document(donuts.p-count).delivered 3-status ? 0 : 1-donuts + 2-donuts + 3-donuts
