@@ -23,21 +23,22 @@ console.dir(status1)
 
 // const 2-root = document(order2),
 const root2 = document.querySelector('[data-key="order2"]')
-console.dir(root2)
+console.dir(root2.innerHTML)
 
 // const 2-biscuits: document(biscuits),
-const biscuits2 = root1.querySelector('[class="biscuits"]')
+const biscuits2 = root2.querySelector('[class="biscuits"]')
 console.dir(biscuits1)
 
 // const 2-donuts: document(donuts),
-const donuts2 = document.querySelector('[class="donuts"]')
+const donuts2 = root2.querySelector('[class="donuts"]')
 console.dir(donuts2)
 
 // const 2-pancakes: document(pancakes),
-const pancakes2 = root1.querySelector('[class="pancakes"]')
+const pancakes2 = root2.querySelector('[class="pancakes"]')
 console.dir(pancakes2)
+
 // const 2-status: document(status)
-const status2 = root1.querySelector('[class="status"]')
+const status2 = root2.querySelector('[class="status"]')
 console.dir(status2)
 
 // const 3-root = document(order3),
@@ -45,36 +46,44 @@ const root3 = document.querySelector('[data-key="order3"]')
 console.dir(root3)
 
 // const 3-biscuits: document(biscuits),
-const biscuits3 = root1.querySelector('[class="biscuits"]')
+const biscuits3 = root3.querySelector('[class="biscuits"]')
 console.dir(biscuits3)
 
 // const 3-donuts: document(donuts),
-const donuts3 = document.querySelector('[class="donuts"]')
+const donuts3 = root3.querySelector('[class="donuts"]')
 console.dir(donuts3)
 
 // const 3-pancakes: document(pancakes),
-const pancakes3 = root1.querySelector('[class="pancakes"]')
+const pancakes3 = root3.querySelector('[class="pancakes"]')
 console.dir(pancakes3.innerHTML)
 
 // const 3-status: document(status)
-const status3 = root1.querySelector('[class="status"]')
+const status3 = root3.querySelector('[class="status"]')
 console.dir(status3)
 
 
 // 1-biscuits= 1-root.biscuits,
-biscuits1.value = root1.biscuits1
+biscuits1.querySelector('[class="count"]').textContent = root1.dataset.biscuits
 // 1-donuts = 1-root.donuts,
+donuts1.querySelector('[class="count"]').textContent = root1.dataset.donuts
 // 1-pancakes = 1-root.pancakes,
+pancakes1.querySelector('[class="count"]').textContent = root1.dataset.pancakes
 // 1-status = 1-root.status ? Delivered : Pending
 
 // 2-biscuits= 2-root.biscuits,
+biscuits2.querySelector('[class="count"]').textContent = root2.dataset.biscuits
 // 2-donuts = 2-root.donuts,
+donuts2.querySelector('[class="count"]').textContent = root2.dataset.donuts
 // 2-pancakes = 2-root.pancakes,
+pancakes2.querySelector('[class="count"]').textContent = root2.dataset.pancakes
 // 2-status = 2-root.status ? Delivered : Pending
 
 // 3-biscuits= 3-root.biscuits,
+biscuits3.querySelector('[class="count"]').textContent = root3.dataset.biscuits
 // 3-donuts = 3-root.donuts,
+donuts3.querySelector('[class="count"]').textContent = root3.dataset.donuts
 // 3-pancakes = 3-root.pancakes,
+pancakes3.querySelector('[class="count"]').textContent = root3.dataset.pancakes
 // 3-status = 3-root.status ? Delivered : Pending
 
 
