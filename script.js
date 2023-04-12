@@ -18,12 +18,12 @@ console.dir(pancakes1)
 
 // const 1-status: document(status)
 // const status1 = document.querySelector('[class="status"]')
-const status1 = root1.querySelector('[class="status"]')
+const status1 = root1.parentElement.querySelector('[class="status"]')
 console.dir(status1)
 
 // const 2-root = document(order2),
 const root2 = document.querySelector('[data-key="order2"]')
-console.dir(root2.innerHTML)
+console.dir(root2)
 
 // const 2-biscuits: document(biscuits),
 const biscuits2 = root2.querySelector('[class="biscuits"]')
@@ -38,7 +38,7 @@ const pancakes2 = root2.querySelector('[class="pancakes"]')
 console.dir(pancakes2)
 
 // const 2-status: document(status)
-const status2 = root2.querySelector('[class="status"]')
+const status2 = root2.parentElement.querySelector('[class="status"]')
 console.dir(status2)
 
 // const 3-root = document(order3),
@@ -58,7 +58,7 @@ const pancakes3 = root3.querySelector('[class="pancakes"]')
 console.dir(pancakes3.innerHTML)
 
 // const 3-status: document(status)
-const status3 = root3.querySelector('[class="status"]')
+const status3 = root3.parentElement.querySelector('[class="status"]')
 console.dir(status3)
 
 
@@ -69,6 +69,7 @@ donuts1.querySelector('[class="count"]').textContent = root1.dataset.donuts
 // 1-pancakes = 1-root.pancakes,
 pancakes1.querySelector('[class="count"]').textContent = root1.dataset.pancakes
 // 1-status = 1-root.status ? Delivered : Pending
+status1.textContent = Boolean(root1.dataset.Delivered) ? "Delivered" : "Pending"
 
 // 2-biscuits= 2-root.biscuits,
 biscuits2.querySelector('[class="count"]').textContent = root2.dataset.biscuits
@@ -77,6 +78,7 @@ donuts2.querySelector('[class="count"]').textContent = root2.dataset.donuts
 // 2-pancakes = 2-root.pancakes,
 pancakes2.querySelector('[class="count"]').textContent = root2.dataset.pancakes
 // 2-status = 2-root.status ? Delivered : Pending
+status2.textContent = Boolean(root2.dataset.Delivered) ? "Delivered" : "Pending"
 
 // 3-biscuits= 3-root.biscuits,
 biscuits3.querySelector('[class="count"]').textContent = root3.dataset.biscuits
@@ -85,7 +87,7 @@ donuts3.querySelector('[class="count"]').textContent = root3.dataset.donuts
 // 3-pancakes = 3-root.pancakes,
 pancakes3.querySelector('[class="count"]').textContent = root3.dataset.pancakes
 // 3-status = 3-root.status ? Delivered : Pending
-
+status3.textContent = Boolean(root3.dataset.delivered) ? "Delivered" : "Pending"
 
 // document(biscuits.p-count).pending = 3-status ? 1-biscuits + 2-biscuits + 3-biscuits: 0
 // document(biscuits.p-count).delivered 3-status ? 0 : 1-biscuits + 2-biscuits + 3-biscuits
